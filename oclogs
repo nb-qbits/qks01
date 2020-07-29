@@ -1,0 +1,182 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< groupid01:qks01 >---------------------------
+[INFO] Building qks01 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ qks01 ---
+[INFO] Deleting /Users/opensource/Downloads/Software/Quarkus/qks01/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ qks01 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ qks01 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/opensource/Downloads/Software/Quarkus/qks01/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ qks01 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/opensource/Downloads/Software/Quarkus/qks01/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ qks01 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/opensource/Downloads/Software/Quarkus/qks01/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ qks01 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.acme.quarkus.sample.HelloResourceTest
+2020-07-28 22:15:31,420 WARN  [io.qua.config] (main) Unrecognized configuration key "quarkus.kubernetes.deploy" was provided; it will be ignored
+2020-07-28 22:15:31,941 INFO  [io.quarkus] (main) Quarkus 1.3.4.Final-redhat-00001 started in 2.167s. Listening on: http://0.0.0.0:8081
+2020-07-28 22:15:31,942 INFO  [io.quarkus] (main) Profile test activated. 
+2020-07-28 22:15:31,942 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, resteasy]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.019 s - in org.acme.quarkus.sample.HelloResourceTest
+2020-07-28 22:15:33,546 INFO  [io.quarkus] (main) Quarkus stopped in 0.032s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ qks01 ---
+[INFO] Building jar: /Users/opensource/Downloads/Software/Quarkus/qks01/target/qks01-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- quarkus-maven-plugin:1.3.4.Final-redhat-00001:build (default) @ qks01 ---
+[INFO] [org.jboss.threads] JBoss Threads version 3.1.1.Final-redhat-00001
+[INFO] [io.quarkus.deployment.pkg.steps.JarResultBuildStep] Building thin jar: /Users/opensource/Downloads/Software/Quarkus/qks01/target/qks01-1.0-SNAPSHOT-runner.jar
+[INFO] Initializing dekorate session.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeploy] Kubernetes API Server at 'https://api.5giot.telco.aws.redhat-demo.com:6443/' successfully contacted.
+[INFO] Default s2i build generator....
+[INFO] Registering s2i handler!
+[INFO] Registering s2i handler!
+[INFO] Generating manifests.
+[INFO] Processing kubernetes configuration.
+[INFO] Processing openshift configuration.
+[INFO] Processing s2i configuration.
+[INFO] Closing dekorate session.
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Performing s2i binary build with jar on server: https://api.5giot.telco.aws.redhat-demo.com:6443/ in namespace:qks01.
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Found: ImageStream openjdk-11-rhel7 repository: registry.access.redhat.com/openjdk/openjdk-11-rhel7
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Applied: ImageStream qks01
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Applied: BuildConfig qks01
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Receiving source from STDIN as archive ...
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Caching blobs under "/var/cache/blobs".
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Getting image source signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:96d330a26895c15953dadd5a7cda8801a777e3b49a21bb0f1d5e3006042399d9
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:25f07378c750b25e33c2e34d53f05f1f14a320217c294f43ef7835b96db2d8ae
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:332a2e4ef6a26a451b89acbc5c7f57d631e64a554a62298403b5b4ea205241b0
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying config sha256:07ffff2090c5386019a7ae352dc421d334a0abad17b8af9a3c37368007c37c77
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Writing manifest to image destination
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Storing signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Generating dockerfile with builder image registry.access.redhat.com/openjdk/openjdk-11-rhel7@sha256:9bafd6a5dd1ccf7aaa3f3bd06cfa55e15dd915cd70aaa59e5987a62b17a875d7
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 1: FROM registry.access.redhat.com/openjdk/openjdk-11-rhel7@sha256:9bafd6a5dd1ccf7aaa3f3bd06cfa55e15dd915cd70aaa59e5987a62b17a875d7
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 2: LABEL "io.openshift.build.image"="registry.access.redhat.com/openjdk/openjdk-11-rhel7@sha256:9bafd6a5dd1ccf7aaa3f3bd06cfa55e15dd915cd70aaa59e5987a62b17a875d7"       "io.openshift.build.source-location"="/tmp/build/inputs"
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 3: ENV OPENSHIFT_BUILD_NAME="qks01-1"     OPENSHIFT_BUILD_NAMESPACE="qks01"
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 4: USER root
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 5: COPY upload/src /tmp/src
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 6: RUN chown -R 185:0 /tmp/src
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 7: USER 185
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 8: RUN /usr/local/s2i/assemble
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] INFO S2I source build with plain binaries detected
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] INFO Copying binaries from /tmp/src to /deployments ...
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] qks01-1.0-SNAPSHOT-runner.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/com.fasterxml.jackson.core.jackson-core-2.10.2.redhat-00003.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/com.sun.activation.jakarta.activation-1.2.1.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-buffer-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-codec-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-codec-dns-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-codec-http-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-codec-http2-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-codec-socks-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-common-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-handler-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-handler-proxy-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-resolver-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-resolver-dns-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.netty.netty-transport-4.1.45.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.arc.arc-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-arc-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-core-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-development-mode-spi-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-kubernetes-client-internal-1.3.4.Final.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-netty-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-openshift-1.3.4.Final.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-resteasy-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-resteasy-common-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-resteasy-server-common-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-vertx-core-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.quarkus-vertx-http-1.3.4.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.quarkus.security.quarkus-security-1.0.1.Final-redhat-00003.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.smallrye.config.smallrye-config-1.7.0.redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.smallrye.config.smallrye-config-common-1.7.0.redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.vertx.vertx-auth-common-3.8.5.redhat-00005.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.vertx.vertx-bridge-common-3.8.5.redhat-00005.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.vertx.vertx-core-3.8.5.redhat-00005.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.vertx.vertx-web-3.8.5.redhat-00005.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/io.vertx.vertx-web-common-3.8.5.redhat-00005.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.annotation.jakarta.annotation-api-1.3.5.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.el.jakarta.el-api-3.0.3.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.enterprise.jakarta.enterprise.cdi-api-2.0.2.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.inject.jakarta.inject-api-1.0.0.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.interceptor.jakarta.interceptor-api-1.2.5.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.transaction.jakarta.transaction-api-1.3.3.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/jakarta.validation.jakarta.validation-api-2.0.2.redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.eclipse.microprofile.config.microprofile-config-api-1.4.0.redhat-00003.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.eclipse.microprofile.context-propagation.microprofile-context-propagation-api-1.0.1.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.graalvm.sdk.graal-sdk-19.3.1.redhat-00011.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.logging.jboss-logging-3.3.2.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.logging.jboss-logging-annotations-2.1.0.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.logmanager.jboss-logmanager-embedded-1.0.4.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.resteasy.resteasy-core-4.5.3.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.resteasy.resteasy-core-spi-4.5.3.Final-redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.slf4j.slf4j-jboss-logging-1.2.0.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.spec.javax.ws.rs.jboss-jaxrs-api_2.1_spec-2.0.1.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.spec.javax.xml.bind.jboss-jaxb-api_2.3_spec-2.0.0.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.jboss.threads.jboss-threads-3.1.1.Final-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.reactivestreams.reactive-streams-1.0.3.redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.slf4j.slf4j-api-1.7.29.redhat-00002.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] lib/org.wildfly.common.wildfly-common-1.5.4.Final-format-001-redhat-00001.jar
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 9: CMD /usr/local/s2i/run
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] STEP 10: COMMIT temp.builder.openshift.io/qks01/qks01-1:56663149
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] time="2020-07-29T02:16:39Z" level=info msg="Image operating system mismatch: image uses \"\", expecting \"linux\""
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] time="2020-07-29T02:16:39Z" level=info msg="Image architecture mismatch: image uses \"\", expecting \"amd64\""
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Getting image source signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:d5409e07a0c879144c196c38ab9a7a3f59d8630882ad19d2d87e0aaa7af09c7f
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:548d9305d034bf3372b997ad14f69bd608eea7112a6200daebf92ed91cb52dfc
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:c13e1fc2ca26f7749d5a2913f891616b909915f1e900be49c24b17f2faaa6f04
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:acd0fb9be634a814c80d512e993bae3c14e2caf18a76aee4025b2d57e64fdc3f
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying config sha256:fda56ea8ccd834001e20e11f5dba180d32dd3e1f8b3d2b14ba3f13f2c991bac4
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Writing manifest to image destination
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Storing signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] --> fda56ea8ccd
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] fda56ea8ccd834001e20e11f5dba180d32dd3e1f8b3d2b14ba3f13f2c991bac4
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] 
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Pushing image image-registry.openshift-image-registry.svc:5000/qks01/qks01:1.0-SNAPSHOT ...
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Getting image source signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:96d330a26895c15953dadd5a7cda8801a777e3b49a21bb0f1d5e3006042399d9
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:acd0fb9be634a814c80d512e993bae3c14e2caf18a76aee4025b2d57e64fdc3f
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:25f07378c750b25e33c2e34d53f05f1f14a320217c294f43ef7835b96db2d8ae
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying blob sha256:332a2e4ef6a26a451b89acbc5c7f57d631e64a554a62298403b5b4ea205241b0
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Copying config sha256:fda56ea8ccd834001e20e11f5dba180d32dd3e1f8b3d2b14ba3f13f2c991bac4
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Writing manifest to image destination
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Storing signatures
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Successfully pushed image-registry.openshift-image-registry.svc:5000/qks01/qks01@sha256:cc7d5e1debd0f4b4b02ceda1ed0afff655bcab31d2c779498527ae4dee7d4e85
+[INFO] [io.quarkus.container.image.s2i.deployment.S2iProcessor] Push successful
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Deploying to openshift server: https://api.5giot.telco.aws.redhat-demo.com:6443/ in namespace: qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: ServiceAccount qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: Service qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: ImageStream openjdk-11-rhel7.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: ImageStream qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: BuildConfig qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: DeploymentConfig qks01.
+[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] Applied: Route qks01.
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 78038ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:29 min
+[INFO] Finished at: 2020-07-28T22:16:53-04:00
+[INFO] ------------------------------------------------------------------------
